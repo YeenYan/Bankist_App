@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "tailwindcss build ./src/assets/css/tailwind.css -o ./src/assets/build/tailwind.css"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/YeenYan/Bankist_App/issues"
   },
-  "homepage": "https://github.com/YeenYan/Bankist_App#readme"
+  "homepage": "https://github.com/YeenYan/Bankist_App#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.2"
+  }
 }
