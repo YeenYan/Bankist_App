@@ -8,13 +8,159 @@
   <title>Bankist App</title>
   <link rel="stylesheet" href="./src/assets/build/tailwind.css">
   <link rel="stylesheet" href="./src/assets/css/style.css">
+  <!-- Google Icons link -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- For ICON from Font Awesome -->
+  <script src="https://kit.fontawesome.com/8b65db1849.js" crossorigin="anonymous"></script>
 </head>
-<body class="w-full">
-  <h1 class="sample">hello</h1>
-  <p class="big">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, tenetur?</p>
+<body class="font-poppins">
+  <header class="container w-screen py-8">
+     <nav class="nav__wrapper w-10/12 mx-auto flex items-center justify-between">
+      <div class="w-full">
+        <img src="./src/assets/Logo.png" alt="Bankist Logo" class="bg-cover bg-center w-9/12 max-w-[11rem] min-w-[8.313rem]">
+      </div>
+      <a href="#" class="btn-primary">Login</a>
+     </nav>
+  </header>
+  <main>
+    <!-- HERO Section -->
+    <section class="container w-screen bg-neutral-100 py-[2.5rem]">
+      <div class="hero__wrapper w-10/12 mx-auto">
+        <div class="hero__title text-center flex flex-col items-center">
+          <h1 class="text-4xl font-semibold text-neutral-700 w-9/12">Online Banking App</h1>
+          <p class="text-neutral-700 w-9/12 font-medium mt-[1.25rem]">A ficticious and minimalistic online banking application.</p>
+          <a href="#" class="btn-create-account btn-primary w-full mt-[3.125rem]">Create Account</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="./src/assets/mobileSizeimage.webp" alt="Devices" class="img bg-contain">
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <!-- NOTE!! update this to JS for dynamic data changes -->
+    <section class="container">
+      <div class="tech__wrapper">
+        <h2>Technologies used</h2>
+      <div class="tech__images">
+        <div class="tech__image">
+          <div>
+            <img src="./src/assets/svg/html5.svg" alt="HTML Logo">
+          </div>
+          <p>HTML5</p>
+        </div>
+        <div class="tech__image">
+          <div>
+            <img src="./src/assets/svg/sass.svg" alt="Sass Logo">
+          </div>
+          <p>SASS</p>
+        </div>
+        <div class="tech__image">
+          <div>
+            <img src="./src/assets/svg/tailwindcss-icon.svg" alt="Tailwindcss Logo">
+          </div>
+          <p>TAILWINDCSS</p>
+        </div>
+        <div class="tech__image">
+          <div>
+            <img src="./src/assets/svg/js.svg" alt="Javascript Logo">
+          </div>
+          <p>JAVASCRIPT</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Operations Section -->
+    <section class="container">
+      <div class="operation__wrapper">
+        <h2>Operations</h2>
+      <div class="operation__details">
+        <p>View Transaction</p>
+        <p>Instant Transfer</p>
+        <p>Instant Loan</p>
+        <p>Currency Exchange</p>
+      </div>
+      <div class="operation__scope-container">
+        <div class="user-scope">
+          <h3>Allows the user to:</h3>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined">arrow_right</span>
+              Log in with a username and password
+            </li>
+            <li>
+              <span class="material-symbols-outlined">arrow_right</span>
+              View and sort their monetary movements
+            </li>
+            <li>
+              <span class="material-symbols-outlined">arrow_right</span>
+              Transfer money to another account
+            </li>
+            <li>
+              <span class="material-symbols-outlined">arrow_right</span>
+              Request a loan from the bank
+            </li>
+          </ul>
+        </div>
+        <div class="user-accounts">
+          <h3>Sample Accounts</h3>
+          <div class="account-table">
+            <div class="table-row">
+              <p>Username</p>
+              <p>Password</p>
+            </div>
+            <div class="table-row">
+              <p>Payroll 1</p>
+              <p>Password</p>
+            </div>
+            <div class="table-row">
+              <p>Payroll 2</p>
+              <p>Password</p>
+            </div>
+            <div class="table-row">
+              <p>Payroll 3</p>
+              <p>Password</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <div>
+        <div>
+          <img src="./src/assets/Logo.png" alt="Bankist Logo">
+        </div>
+        <p>Design & Built by Mark Ian Reyes</p>
+      </div>
+      <div class="social-links">
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-behance"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-codepen"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/assets/js/landingPage.js"></script>
 </body>
 </html>
 
 <!-- npx tailwindcss -i ./src/assets/css/tailwind.css -o ./src/assets/build/tailwind.css --watch -->
-<!-- npx tailwindcss -i ./src/assets/css/tailwind.css ./src/assets/css/sample.css -o ./src/assets/build/tailwind.css --watch -->
-<!-- "build-css": "tailwindcss build ./src/assets/css/tailwind.css -o ./src/assets/build/tailwind.css" -->

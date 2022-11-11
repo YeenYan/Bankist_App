@@ -5,7 +5,12 @@
 @tailwind utilities;
 
 @layer components {
-  .sample {
-    @apply text-9xl text-shades-black bg-warning-500 font-poppins font-bold;
+  .guide {
+    @apply outline outline-1 outline-error-500;
+  }
+
+  .btn-primary {
+    @apply bg-tertiary-500 text-shades-white py-2.5 px-[2.5rem] rounded text-xs hover:bg-tertiary-600 transition-all;
   }
 }
+/* px-[2.5rem] */
