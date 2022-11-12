@@ -6,6 +6,7 @@ const largeImage = './src/assets/device.webp';
 
 const maxMobileScreenSize = 600;
 
+// dynamically changing image directory depending on screen size
 (function () {
   window.onresize = displayWindowSize;
   window.onload = displayWindowSize;

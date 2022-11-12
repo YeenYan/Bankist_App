@@ -9,6 +9,22 @@
     @apply outline outline-1 outline-error-500;
   }
 
+  .container {
+    @apply w-screen max-w-full;
+  }
+
+  .wrapper {
+    @apply w-10/12 mx-auto max-w-[63rem];
+  }
+
+  .subtitle-text {
+    @apply text-2xl font-semibold text-neutral-600 text-center py-5;
+  }
+
+  .tech__image {
+    @apply text-center w-full max-w-[8.438rem] flex flex-col justify-between text-center guide;
+  }
+
   .btn-primary {
     @apply bg-tertiary-500 text-shades-white py-2.5 px-[2.5rem] rounded text-xs hover:bg-tertiary-600 transition-all;
   }
