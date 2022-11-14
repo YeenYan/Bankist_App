@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer components {
+  /* ===============================================
+              Generic Utility Classes
+  =============================================== */
+
   .guide {
     @apply outline outline-1 outline-error-500;
   }
@@ -17,16 +21,71 @@
     @apply w-10/12 mx-auto max-w-[63rem];
   }
 
+  /* ===============================================
+              Technologies Section
+  =============================================== */
+
   .subtitle-text {
-    @apply text-2xl font-semibold text-neutral-600 text-center py-5;
+    @apply text-2xl font-semibold text-neutral-600 text-center pb-6;
   }
 
   .tech__image {
-    @apply text-center w-full max-w-[8.438rem] flex flex-col justify-between text-center guide;
+    @apply text-center w-full max-w-[8.438rem] flex flex-col justify-between text-center;
+  }
+
+  .tech__image-logo {
+    @apply flex justify-center p-4;
+  }
+
+  .tech__image-text {
+    @apply text-neutral-500 font-medium text-xs;
   }
 
   .btn-primary {
     @apply bg-tertiary-500 text-shades-white py-2.5 px-[2.5rem] rounded text-xs hover:bg-tertiary-600 transition-all;
   }
+
+  /* ===============================================
+              Operation Section
+  =============================================== */
+
+  .detail-text {
+    @apply text-xl py-5 rounded-full text-center text-shades-white font-medium md:max-w-[15rem] lg:max-w-[15rem] w-full;
+  }
+
+  .user__content-wrapper {
+    @apply max-w-[26.5rem] w-full;
+  }
+
+  .user-title-text {
+    @apply text-neutral-600 font-medium text-xl mb-5;
+  }
+
+  .scope-list {
+    @apply flex text-sm text-neutral-500;
+  }
+
+  .table-row {
+    @apply py-5 border-b-[.6px] border-neutral-300;
+  }
+
+  .col-title {
+    @apply text-neutral-500 text-xs font-medium;
+  }
+
+  .col-text {
+    @apply text-neutral-600 font-medium text-sm;
+  }
+
+  /* ===============================================
+              Footer
+  =============================================== */
+
+  .social-links {
+    @apply flex justify-between w-full max-w-[18rem] mx-auto;
+  }
+
+  .social-link {
+    @apply w-8 h-8 flex justify-center items-center text-neutral-500;
+  }
 }
-/* px-[2.5rem] */

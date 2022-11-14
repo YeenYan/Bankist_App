@@ -39,88 +39,88 @@
 
     <!-- Technologies Section -->
     <!-- NOTE!! update this to JS for dynamic data changes -->
-    <section class="container py-[2.5rem] bg-neutral-100">
+    <section class="container py-14 bg-neutral-100">
       <div class="tech__wrapper wrapper">
         <h2 class="subtitle-text">Technologies used</h2>
-        <div class="tech__images flex justify-center flex-wrap gap-2.5">
+        <div class="tech__images flex justify-center flex-wrap gap-4">
           <div class="tech__image">
-            <div class="flex justify-center">
+            <div class="tech__image-logo">
               <img src="./src/assets/svg/html5.svg" alt="HTML Logo" class="bg-center bg-contain">
             </div>
-            <p>HTML5</p>
+            <p class="tech__image-text">HTML5</p>
           </div>
           <div class="tech__image">
-            <div class="flex justify-center">
+            <div class="tech__image-logo">
               <img src="./src/assets/svg/sass.svg" alt="Sass Logo" class="">
             </div>
-            <p>SASS</p>
+            <p class="tech__image-text">SASS</p>
           </div>
           <div class="tech__image">
-            <div class="flex justify-center">
+            <div class="tech__image-logo">
               <img src="./src/assets/svg/tailwind.svg" alt="Tailwindcss Logo" class="">
             </div>
-            <p>TAILWINDCSS</p>
+            <p class="tech__image-text">TAILWINDCSS</p>
           </div>
           <div class="tech__image">
-            <div class="flex justify-center">
+            <div class="tech__image-logo">
               <img src="./src/assets/svg/js.svg" alt="Javascript Logo" class="">
             </div>
-            <p>JAVASCRIPT</p>
+            <p class="tech__image-text">JAVASCRIPT</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Operations Section -->
-    <section class="container">
-      <div class="operation__wrapper">
+    <section class="container py-28">
+      <div class="operation__wrapper wrapper">
         <h2 class="subtitle-text">Operations</h2>
-      <div class="operation__details">
-        <p>View Transaction</p>
-        <p>Instant Transfer</p>
-        <p>Instant Loan</p>
-        <p>Currency Exchange</p>
+      <div class="operation__details flex justify-center flex-wrap gap-5 mb-20">
+        <p class="detail-text bg-primary-500">View Transaction</p>
+        <p class="detail-text bg-tertiary-500">Instant Transfer</p>
+        <p class="detail-text bg-error-500">Instant Loan</p>
+        <p class="detail-text bg-warning-500">Currency Exchange</p>
       </div>
-      <div class="operation__scope-container">
-        <div class="user-scope">
-          <h3>Allows the user to:</h3>
-          <ul>
-            <li>
-              <span class="material-symbols-outlined">arrow_right</span>
+      <div class="operation__scope-container flex flex-wrap justify-center gap-16">
+        <div class="user-scope user__content-wrapper">
+          <h3 class="user-title-text">Allows the user to:</h3>
+          <ul class="space-y-5">
+            <li class="scope-list">
+              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
               Log in with a username and password
             </li>
-            <li>
-              <span class="material-symbols-outlined">arrow_right</span>
+            <li class="scope-list">
+              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
               View and sort their monetary movements
             </li>
-            <li>
-              <span class="material-symbols-outlined">arrow_right</span>
+            <li class="scope-list">
+              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
               Transfer money to another account
             </li>
-            <li>
-              <span class="material-symbols-outlined">arrow_right</span>
+            <li class="scope-list">
+              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
               Request a loan from the bank
             </li>
           </ul>
         </div>
-        <div class="user-accounts">
-          <h3>Sample Accounts</h3>
-          <div class="account-table">
-            <div class="table-row">
-              <p>Username</p>
-              <p>Password</p>
+        <div class="user-accounts user__content-wrapper">
+          <h3 class="user-title-text">Sample Accounts</h3>
+          <div class="account-table p-5 shadow-lg rounded">
+            <div class="table-row-header grid grid-cols-2 py-1.5">
+              <p class="col-title">Username</p>
+              <p class="col-title">Password</p>
             </div>
-            <div class="table-row">
-              <p>Payroll 1</p>
-              <p>Password</p>
+            <div class="table-row grid grid-cols-2">
+              <p class="col-text">Payroll 1</p>
+              <p class="col-text">Password</p>
             </div>
-            <div class="table-row">
-              <p>Payroll 2</p>
-              <p>Password</p>
+            <div class="table-row grid grid-cols-2">
+              <p class="col-text">Payroll 2</p>
+              <p class="col-text">Password</p>
             </div>
-            <div class="table-row">
-              <p>Payroll 3</p>
-              <p>Password</p>
+            <div class="table-row grid grid-cols-2">
+              <p class="col-text">Payroll 3</p>
+              <p class="col-text">Password</p>
             </div>
           </div>
         </div>
@@ -129,30 +129,30 @@
     </section>
   </main>
   <footer class="container">
-    <div class="">
-      <div>
-        <div>
-          <img src="./src/assets/Logo.png" alt="Bankist Logo" class="">
+    <div class="wrapper w-full mb-5 mt-36">
+      <div class="text-center grid justify-items-center max-w-[12.5rem] mx-auto my-4">
+        <div class="max-w-[8.938rem]">
+          <img src="./src/assets/Logo.png" alt="Bankist Logo" class="w-full bg-center">
         </div>
-        <p>Design & Built by Mark Ian Reyes</p>
+        <p class="text-neutral-400 text-xs">Design & Built by Mark Ian Reyes</p>
       </div>
       <div class="social-links">
-        <a href="#">
+        <a href="#" class="social-link">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
-        <a href="#">
+        <a href="#" class="social-link">
           <i class="fa-brands fa-behance"></i>
         </a>
-        <a href="#">
+        <a href="#" class="social-link">
           <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="#">
+        <a href="#" class="social-link">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="#">
+        <a href="#" class="social-link">
           <i class="fa-brands fa-codepen"></i>
         </a>
-        <a href="#">
+        <a href="#" class="social-link">
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
