@@ -21,6 +21,14 @@
     @apply w-10/12 mx-auto max-w-[63rem];
   }
 
+  .btn-primary {
+    @apply text-center bg-tertiary-500 text-shades-white py-2.5 px-[2.5rem] rounded text-xs hover:bg-tertiary-600 transition-all;
+  }
+
+  /* Media Queries */
+  .btn-primary-mdQueries {
+    @apply md:text-sm md:w-8/12 min-[450px]:max-w-[11rem] md:px-[0];
+  }
   /* ===============================================
               Technologies Section
   =============================================== */
@@ -41,8 +49,13 @@
     @apply text-neutral-500 font-medium text-xs;
   }
 
-  .btn-primary {
-    @apply bg-tertiary-500 text-shades-white py-2.5 px-[2.5rem] rounded text-xs hover:bg-tertiary-600 transition-all;
+  /* Media Queries */
+  .subtitle-text-mdQueries {
+    @apply md:text-3xl md:pb-9;
+  }
+
+  .image-text-mdQueries {
+    @apply text-sm;
   }
 
   /* ===============================================
@@ -50,7 +63,7 @@
   =============================================== */
 
   .detail-text {
-    @apply text-xl py-5 rounded-full text-center text-shades-white font-medium md:max-w-[15rem] lg:max-w-[15rem] w-full;
+    @apply text-xl py-5 rounded-full text-center text-shades-white font-medium max-w-[33rem] lg:max-w-[15rem] w-full h-fit;
   }
 
   .user__content-wrapper {
@@ -77,12 +90,25 @@
     @apply text-neutral-600 font-medium text-sm;
   }
 
+  /* Media Queries */
+  .user-title-text-mdQueries {
+    @apply text-2xl;
+  }
+
+  .scope-list-mdQueries {
+    @apply text-base;
+  }
+
+  .col-text-mdQueries {
+    @apply text-base;
+  }
+
   /* ===============================================
               Footer
   =============================================== */
 
   .social-links {
-    @apply flex justify-between w-full max-w-[18rem] mx-auto;
+    @apply flex justify-between w-full max-w-[18rem] mx-auto lg:m-0;
   }
 
   .social-link {

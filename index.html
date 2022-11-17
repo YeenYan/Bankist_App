@@ -19,7 +19,7 @@
       <div class="w-full">
         <img src="./src/assets/Logo.png" alt="Bankist Logo" class="bg-cover bg-center w-9/12 max-w-[11rem] min-w-[8.313rem]">
       </div>
-      <a href="#" class="btn-primary">Login</a>
+      <a href="#" class="btn-primary btn-primary-mdQueries">Login</a>
      </nav>
   </header>
   <main class="">
@@ -27,45 +27,45 @@
     <section class="container py-[2.5rem]">
       <div class="hero__wrapper wrapper">
         <div class="hero__title text-center flex flex-col items-center">
-          <h1 class="text-4xl font-semibold text-neutral-700 w-9/12">Online Banking App</h1>
-          <p class="text-neutral-700 w-9/12 font-medium mt-[1.25rem]">A ficticious and minimalistic online banking application.</p>
-          <a href="#" class="btn-create-account btn-primary w-full mt-[3.125rem]">Create Account</a>
+          <h1 class="text-4xl min-[500px]:text-5xl font-semibold text-neutral-700 w-9/12 min-[400px]:w-full">Online Banking App</h1>
+          <p class="text-neutral-700 w-9/12 md:w-10/12 font-medium mt-[1.25rem] md:mt-[0.813rem] min-[500px]:text-xl">A ficticious and minimalistic online banking application.</p>
+          <a href="#" class="btn-create-account btn-primary btn-primary-mdQueries w-10/12 mt-[3.125rem] md:mt-[2rem]">Create Account</a>
         </div>
       </div>
-      <div class="hero__image">
-        <img src="./src/assets/mobileSizeimage.webp" alt="Devices" class="img bg-contain">
+      <div class="hero__image grid justify-items-center">
+        <img src="./src/assets/mobileSizeimage.webp" alt="Devices" class="img w-full bg-contain max-w-[933px]">
       </div>
     </section>
 
     <!-- Technologies Section -->
     <!-- NOTE!! update this to JS for dynamic data changes -->
-    <section class="container py-14 bg-neutral-100">
+    <section class="container py-14 md:py-16 bg-neutral-100">
       <div class="tech__wrapper wrapper">
-        <h2 class="subtitle-text">Technologies used</h2>
+        <h2 class="subtitle-text subtitle-text-mdQueries">Technologies used</h2>
         <div class="tech__images flex justify-center flex-wrap gap-4">
           <div class="tech__image">
             <div class="tech__image-logo">
               <img src="./src/assets/svg/html5.svg" alt="HTML Logo" class="bg-center bg-contain">
             </div>
-            <p class="tech__image-text">HTML5</p>
+            <p class="tech__image-text image-text-mdQueries">HTML5</p>
           </div>
           <div class="tech__image">
             <div class="tech__image-logo">
               <img src="./src/assets/svg/sass.svg" alt="Sass Logo" class="">
             </div>
-            <p class="tech__image-text">SASS</p>
+            <p class="tech__image-text image-text-mdQueries">SASS</p>
           </div>
           <div class="tech__image">
             <div class="tech__image-logo">
               <img src="./src/assets/svg/tailwind.svg" alt="Tailwindcss Logo" class="">
             </div>
-            <p class="tech__image-text">TAILWINDCSS</p>
+            <p class="tech__image-text image-text-mdQueries">TAILWINDCSS</p>
           </div>
           <div class="tech__image">
             <div class="tech__image-logo">
               <img src="./src/assets/svg/js.svg" alt="Javascript Logo" class="">
             </div>
-            <p class="tech__image-text">JAVASCRIPT</p>
+            <p class="tech__image-text image-text-mdQueries">JAVASCRIPT</p>
           </div>
         </div>
       </div>
@@ -74,63 +74,63 @@
     <!-- Operations Section -->
     <section class="container py-28">
       <div class="operation__wrapper wrapper">
-        <h2 class="subtitle-text">Operations</h2>
-      <div class="operation__details flex justify-center flex-wrap gap-5 mb-20">
-        <p class="detail-text bg-primary-500">View Transaction</p>
-        <p class="detail-text bg-tertiary-500">Instant Transfer</p>
-        <p class="detail-text bg-error-500">Instant Loan</p>
-        <p class="detail-text bg-warning-500">Currency Exchange</p>
-      </div>
-      <div class="operation__scope-container flex flex-wrap justify-center gap-16">
-        <div class="user-scope user__content-wrapper">
-          <h3 class="user-title-text">Allows the user to:</h3>
-          <ul class="space-y-5">
-            <li class="scope-list">
-              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
-              Log in with a username and password
-            </li>
-            <li class="scope-list">
-              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
-              View and sort their monetary movements
-            </li>
-            <li class="scope-list">
-              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
-              Transfer money to another account
-            </li>
-            <li class="scope-list">
-              <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
-              Request a loan from the bank
-            </li>
-          </ul>
+        <h2 class="subtitle-text subtitle-text-mdQueries">Operations</h2>
+        <div class="operation__details flex justify-center flex-wrap lg:flex-nowrap gap-5 mb-20">
+          <p class="detail-text lg:mt-[3.5rem] bg-primary-500">View Transaction</p>
+          <p class="detail-text lg:mt-[2.5rem] bg-tertiary-500">Instant Transfer</p>
+          <p class="detail-text lg:mt-[1.5rem] bg-error-500">Instant Loan</p>
+          <p class="detail-text bg-warning-500">Currency Exchange</p>
         </div>
-        <div class="user-accounts user__content-wrapper">
-          <h3 class="user-title-text">Sample Accounts</h3>
-          <div class="account-table p-5 shadow-lg rounded">
-            <div class="table-row-header grid grid-cols-2 py-1.5">
-              <p class="col-title">Username</p>
-              <p class="col-title">Password</p>
-            </div>
-            <div class="table-row grid grid-cols-2">
-              <p class="col-text">Payroll 1</p>
-              <p class="col-text">Password</p>
-            </div>
-            <div class="table-row grid grid-cols-2">
-              <p class="col-text">Payroll 2</p>
-              <p class="col-text">Password</p>
-            </div>
-            <div class="table-row grid grid-cols-2">
-              <p class="col-text">Payroll 3</p>
-              <p class="col-text">Password</p>
+        <div class="operation__scope-container flex flex-wrap lg:flex-nowrap justify-center xl:justify-between gap-16">
+          <div class="user-scope user__content-wrapper">
+            <h3 class="user-title-text user-title-text-mdQueries">Allows the user to:</h3>
+            <ul class="space-y-5">
+              <li class="scope-list scope-list-mdQueries">
+                <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
+                Log in with a username and password
+              </li>
+              <li class="scope-list scope-list-mdQueries">
+                <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
+                View and sort their monetary movements
+              </li>
+              <li class="scope-list scope-list-mdQueries">
+                <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
+                Transfer money to another account
+              </li>
+              <li class="scope-list scope-list-mdQueries">
+                <span class="material-symbols-outlined text-tertiary-500">arrow_right</span>
+                Request a loan from the bank
+              </li>
+            </ul>
+          </div>
+          <div class="user-accounts user__content-wrapper">
+            <h3 class="user-title-text user-title-text-mdQueries">Sample Accounts</h3>
+            <div class="account-table p-5 shadow-lg rounded">
+              <div class="table-row-header grid grid-cols-2 py-1.5">
+                <p class="col-title">Username</p>
+                <p class="col-title">Password</p>
+              </div>
+              <div class="table-row grid grid-cols-2">
+                <p class="col-text col-text-mdQueries">Payroll 1</p>
+                <p class="col-text col-text-mdQueries">Password</p>
+              </div>
+              <div class="table-row grid grid-cols-2">
+                <p class="col-text col-text-mdQueries">Payroll 2</p>
+                <p class="col-text col-text-mdQueries">Password</p>
+              </div>
+              <div class="table-row grid grid-cols-2">
+                <p class="col-text col-text-mdQueries">Payroll 3</p>
+                <p class="col-text col-text-mdQueries">Password</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
     </section>
   </main>
   <footer class="container">
-    <div class="wrapper w-full mb-5 mt-36">
-      <div class="text-center grid justify-items-center max-w-[12.5rem] mx-auto my-4">
+    <div class="wrapper w-full mb-5 mt-36 md:flex items-center lg:justify-between">
+      <div class="text-center grid justify-items-center mx-auto md:justify-items-start max-w-[12.5rem] my-4 lg:m-0">
         <div class="max-w-[8.938rem]">
           <img src="./src/assets/Logo.png" alt="Bankist Logo" class="w-full bg-center">
         </div>
