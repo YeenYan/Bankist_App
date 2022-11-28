@@ -24,9 +24,11 @@
       background-image: url('./src/assets/background/backgroundPattern.svg');
     "
   >
-    <main>
-      <div class="bg-shades-white">
-        <div class="h-screen grid content-center text-center wrapper">
+    <main class="flex h-screen items-center justify-center">
+      <div
+        class="bg-shades-white w-screen h-screen md:max-w-[27.5rem] md:h-auto md:py-14 md:px-9 md:rounded md:drop-shadow-lg"
+      >
+        <div class="h-full grid content-center text-center wrapper">
           <div class="w-[11rem] max-w-full mx-auto mb-12">
             <img
               src="./src/assets/Logo.png"
@@ -34,20 +36,47 @@
               class="w-full bg-center bg-contain"
             />
           </div>
-          <div class="login-container">
+          <div class="login-container max-w-[300px] mx-auto">
             <p class="top-text">Enter username and password to sign in</p>
-            <div class="flex flex-col gap-2">
+
+            <!-- Login -->
+            <form
+              class="flex flex-col gap-2 signin-form active"
+              form-attribute="signin-active"
+            >
               <input type="text" placeholder="Username" class="inputBox" />
               <input type="password" placeholder="Password" class="inputBox" />
-              <a href="" class="btn">Sign in</a>
-            </div>
+              <button type="submit" class="btn btn-signin">Sign in</button>
+            </form>
+
+            <!-- Sign Up -->
+            <form
+              class="flex flex-col gap-2 signup-form hidden"
+              form-attribute="signup"
+            >
+              <input type="text" placeholder="Firstname" class="inputBox" />
+              <input type="text" placeholder="Lastname" class="inputBox" />
+              <input
+                type="text"
+                placeholder="Username"
+                class="inputBox mt-2.5"
+              />
+              <input type="password" placeholder="Password" class="inputBox" />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                class="inputBox"
+              />
+              <button type="submit" class="btn btn-signup">Sign up</button>
+            </form>
+
             <p class="bot-text">Don't have an account?</p>
-            <a href="#" class="text-link">Create Account</a>
+            <a href="#" class="text-link md:text-base">Create Account</a>
           </div>
         </div>
       </div>
     </main>
-    <script src=""></script>
+    <script src="./src/assets/js/loginPage.js"></script>
   </body>
 </html>
 
