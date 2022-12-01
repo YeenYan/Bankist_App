@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./src/assets/icon.ico" />
+    <title>Bankist App</title>
+    <link rel="stylesheet" href="./src/assets/build/app.css" />
+    <!-- Google Icons link -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- For ICON from Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8b65db1849.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="font-poppins bg-neutral-50">
+    <main class="w-10/12 mx-auto my-7">
+      <!-- for grid areas -->
+      <div>
+        <!-- Avatar -->
+        <div class="flex gap-2">
+          <div class="">
+            <img src="./src/assets/user_girl.jpg" alt="" class="user__image" />
+          </div>
+          <p class="user__name">Sample N.</p>
+        </div>
+
+        <!-- Account Balance -->
+        <div class="acc__bal-wrapper">
+          <p class="acc__bal-subtext">Your balance</p>
+          <p class="acc__bal-amount">$0,000</p>
+          <p class="acc__bal-subtext">As of 00/00/0000</p>
+        </div>
+
+        <!-- Welcome Content -->
+        <div class="py-6">
+          <h3 class="welcome__text">Welcome back, Name!</h3>
+          <div class="card__container">
+            <div class="card__wrapper">
+              <img src="./src/assets/debit-card.jpg" alt="" />
+            </div>
+            <div>
+              <p class="card__name">Sample N.</p>
+              <p class="card__number">0000000000000</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Money Transactions -->
+        <div class="">
+          <!-- Transfer Money -->
+          <div class="operation__wrapper transfer__wrapper">
+            <div class="transfer__header operation__header-text">
+              <span class="material-symbols-outlined"> expand_more </span>
+              Transfer Money
+            </div>
+            <form action="" class="operation__form-wrapper">
+              <label for="accountNum" class="operation__inputs-label"
+                >Account Number</label
+              >
+              <input
+                type="number"
+                name="accountNum"
+                id="accountNum"
+                class="operation__inputs mb-3"
+                placeholder="Placeholder"
+              />
+              <div>
+                <label for="transferAmount" class="operation__inputs-label"
+                  >Amount</label
+                >
+                <div class="flex gap-5">
+                  <input
+                    type="number"
+                    name="transferAmount"
+                    id="transferAmount"
+                    class="operation__inputs"
+                    placeholder="Placeholder"
+                  />
+                  <button class="operation__btn bg-tertiary-500">
+                    Transfer
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Request Loan -->
+          <div class="operation__wrapper request__wrapper">
+            <div class="operation__header-text">
+              <span class="material-symbols-outlined"> expand_more </span>
+              Request Loan
+            </div>
+            <form action="" class="operation__form-wrapper">
+              <div class="flex flex-col">
+                <label for="loanAmount" class="operation__inputs-label"
+                  >Amount</label
+                >
+                <input
+                  type="number"
+                  name="loanAmount"
+                  id="loanAmount"
+                  class="operation__inputs mb-3"
+                  placeholder="Placeholder"
+                />
+                <button class="operation__btn bg-primary-500 self-end">
+                  Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="py-3">
+          <p class="operation__header-text">Summary</p>
+          <div class="summary__wrapper">
+            <div class="summary__content">
+              <p class="summary__text-label">Total Deposits</p>
+              <p
+                class="summary__text-value text-tertiary-500"
+                id="summary__value-deposit"
+              >
+                $0,000
+              </p>
+            </div>
+            <div class="summary__content">
+              <p class="summary__text-label">Total Withdrawals</p>
+              <p
+                class="summary__text-value text-error-500"
+                id="summary__value-withdrawal"
+              >
+                $0,000
+              </p>
+            </div>
+            <div class="summary__content">
+              <p class="summary__text-label">Total Interest Earned</p>
+              <p
+                class="summary__text-value text-primary-500"
+                id="summary__value-earned"
+              >
+                $0,000
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transaction History -->
+        <div>
+          <div>
+            <p>Transaction History</p>
+            <div>
+              Sort
+              <span class="material-symbols-outlined"> south </span>
+            </div>
+          </div>
+          <div id="movements">
+            <!-- rows -->
+            <div id="movements__row">
+              <p id="movements__type">Deposit</p>
+              <div>
+                <p id="movements__by">Payroll</p>
+                <p id="movements__date">00/00/0000</p>
+              </div>
+              <p id="movements__value">$00,000</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <footer>
+          <div
+            class="text-center grid justify-items-center mx-auto md:justify-items-start max-w-[12.5rem] my-4 lg:m-0"
+          >
+            <div class="max-w-[8.938rem]">
+              <img
+                src="./src/assets/Logo.png"
+                alt="Bankist Logo"
+                class="w-full bg-center"
+              />
+            </div>
+            <p class="text-neutral-400 text-xs">
+              Design & Built by Mark Ian Reyes
+            </p>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <!-- <script src="./src/assets/js/loginPage.js"></script> -->
+  </body>
+</html>
+
+<!-- npx tailwindcss -i ./src/assets/css/app.css -o ./src/assets/build/app.css --watch -->

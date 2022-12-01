@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* ===============================================
+              Generic Utility Classes
+  =============================================== */
+
+  .guide {
+    @apply outline outline-1 outline-error-500;
+  }
+
+  .wrapper {
+    @apply w-10/12 mx-auto max-w-[63rem];
+  }
+
+  /* ===============================================
+                  Avatar
+  =============================================== */
+
+  .user__image {
+    @apply object-cover rounded-full w-6 h-6;
+  }
+
+  .user__name {
+    @apply text-neutral-500;
+  }
+
+  /* ===============================================
+                  Account Balance
+  =============================================== */
+
+  .acc__bal-wrapper {
+    @apply text-center border-b-[.8px] border-neutral-200 py-6;
+  }
+
+  .acc__bal-amount {
+    @apply text-4xl font-semibold text-neutral-600;
+  }
+
+  .acc__bal-subtext {
+    @apply text-xs text-neutral-500;
+  }
+
+  /* ===============================================
+                  Welcome Content
+  =============================================== */
+
+  .welcome__text {
+    @apply text-center text-neutral-500 text-2xl font-semibold;
+  }
+
+  .card__container {
+    @apply flex items-center justify-center gap-3 p-5 bg-shades-white rounded shadow-md mt-5;
+  }
+
+  .card__wrapper {
+    @apply max-w-[9rem] w-full;
+  }
+
+  .card__name {
+    @apply text-neutral-600 text-base font-medium;
+  }
+
+  .card__number {
+    @apply text-neutral-500 text-xs;
+  }
+
+  /* ===============================================
+        Operation Content - Utility Classes
+  =============================================== */
+
+  .operation__wrapper {
+    @apply border-b-[.8px] border-neutral-200 py-3;
+  }
+
+  .operation__header-text {
+    @apply flex text-neutral-500 text-sm font-medium py-2;
+  }
+
+  .operation__form-wrapper {
+    @apply py-3;
+  }
+
+  .operation__inputs-label {
+    @apply text-xs text-neutral-500 mb-1;
+  }
+
+  .operation__inputs {
+    @apply rounded p-2.5 w-full text-xs text-neutral-400 bg-neutral-100;
+  }
+
+  .operation__btn {
+    @apply rounded text-xs text-shades-white py-2.5 max-w-[9.25rem] w-full;
+  }
+
+  .transfer__header {
+  }
+
+  /* ===============================================
+                    Summary Content
+  =============================================== */
+
+  .summary__wrapper {
+    @apply flex flex-wrap gap-3 py-3;
+  }
+
+  .summary__content {
+    @apply basis-1/2 max-w-[9rem];
+  }
+
+  .summary__text-label {
+    @apply text-xs text-neutral-500;
+  }
+
+  .summary__text-value {
+    @apply text-lg font-medium;
+  }
+}
