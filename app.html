@@ -18,12 +18,12 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="font-poppins bg-neutral-50">
-    <main class="w-10/12 mx-auto my-7">
+  <body class="font-poppins lg:bg-neutral-50">
+    <main class="w-10/12 mx-auto bg-shades-white">
       <!-- for grid areas -->
-      <div>
+      <div class="grid__layout">
         <!-- Avatar -->
-        <div class="flex gap-2">
+        <div class="flex items-center gap-2 lg:order-1 lg__pad">
           <div class="">
             <img src="./src/assets/user_girl.jpg" alt="" class="user__image" />
           </div>
@@ -31,14 +31,14 @@
         </div>
 
         <!-- Account Balance -->
-        <div class="acc__bal-wrapper">
+        <div class="acc__bal-wrapper lg:order-3 lg__pad">
           <p class="acc__bal-subtext">Your balance</p>
           <p class="acc__bal-amount">$0,000</p>
           <p class="acc__bal-subtext">As of 00/00/0000</p>
         </div>
 
         <!-- Welcome Content -->
-        <div class="py-6">
+        <div class="welcome__wrapper md__container lg:row-span-2 lg:order-2">
           <h3 class="welcome__text">Welcome back, Name!</h3>
           <div class="card__container">
             <div class="card__wrapper">
@@ -52,7 +52,9 @@
         </div>
 
         <!-- Money Transactions -->
-        <div class="">
+        <div
+          class="operation__container md__container bot-line lg:order-5 lg__pad"
+        >
           <!-- Transfer Money -->
           <div class="operation__wrapper transfer__wrapper">
             <div class="transfer__header operation__header-text">
@@ -97,7 +99,7 @@
               Request Loan
             </div>
             <form action="" class="operation__form-wrapper">
-              <div class="flex flex-col">
+              <div class="grid">
                 <label for="loanAmount" class="operation__inputs-label"
                   >Amount</label
                 >
@@ -108,7 +110,7 @@
                   class="operation__inputs mb-3"
                   placeholder="Placeholder"
                 />
-                <button class="operation__btn bg-primary-500 self-end">
+                <button class="operation__btn bg-primary-500 place-self-end">
                   Request
                 </button>
               </div>
@@ -117,7 +119,7 @@
         </div>
 
         <!-- Summary -->
-        <div class="py-3">
+        <div class="py-3 md__container lg:order-7 lg:w-full lg__pad">
           <p class="operation__header-text">Summary</p>
           <div class="summary__wrapper">
             <div class="summary__content">
@@ -151,31 +153,46 @@
         </div>
 
         <!-- Transaction History -->
-        <div>
-          <div>
-            <p>Transaction History</p>
-            <div>
+        <div
+          class="transaction__container md__container lg:order-6 lg:row-span-5"
+        >
+          <div class="transaction__wrapper-header">
+            <p class="operation__header-text">Transaction History</p>
+            <div class="transaction__sort-btn">
               Sort
               <span class="material-symbols-outlined"> south </span>
             </div>
           </div>
-          <div id="movements">
+          <div class="movements">
             <!-- rows -->
-            <div id="movements__row">
-              <p id="movements__type">Deposit</p>
-              <div>
-                <p id="movements__by">Payroll</p>
-                <p id="movements__date">00/00/0000</p>
+            <div class="movements__row">
+              <div class="flex items-center">
+                <p class="movements__type">Deposit</p>
+                <div class="movements__wrapper">
+                  <p class="movements__by">Payroll</p>
+                  <p class="movements__date">00/00/0000</p>
+                </div>
               </div>
-              <p id="movements__value">$00,000</p>
+              <p class="movements__value">$00,000</p>
+            </div>
+            <!-- rows -->
+            <div class="movements__row">
+              <div class="flex items-center">
+                <p class="movements__type">Deposit</p>
+                <div class="movements__wrapper">
+                  <p class="movements__by">Payroll</p>
+                  <p class="movements__date">00/00/0000</p>
+                </div>
+              </div>
+              <p class="movements__value">$00,000</p>
             </div>
           </div>
         </div>
 
         <!-- Logo -->
-        <footer>
+        <footer class="mt-[9.313rem] mb-5 lg:order-9 lg__pad">
           <div
-            class="text-center grid justify-items-center mx-auto md:justify-items-start max-w-[12.5rem] my-4 lg:m-0"
+            class="text-center grid justify-items-center mx-auto max-w-[12.5rem] my-4 lg:m-0 lg:justify-items-start"
           >
             <div class="max-w-[8.938rem]">
               <img

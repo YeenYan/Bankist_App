@@ -17,16 +17,26 @@
     @apply w-10/12 mx-auto max-w-[63rem];
   }
 
+  .grid__layout {
+    @apply py-7 lg:grid lg:grid-cols-2 lg:grid-cols-[minmax(0,_400px)_1fr] lg:grid-rows-[100px_150px_minmax(0,_auto)_auto] max-w-[1220px] lg:mx-auto;
+  }
+  /* grid-rows-[200px_minmax(900px,_1fr)_100px] */
+  /* grid-rows-[100px_repeat(5_minmax(0,_1fr))] */
+
+  .bot-line {
+    @apply md:border-b-[.8px] md:border-neutral-200;
+  }
+
   /* ===============================================
                   Avatar
   =============================================== */
 
   .user__image {
-    @apply object-cover rounded-full w-6 h-6;
+    @apply object-cover rounded-full w-6 h-6 md:w-10 md:h-10;
   }
 
   .user__name {
-    @apply text-neutral-500;
+    @apply text-neutral-500 font-medium md:text-lg;
   }
 
   /* ===============================================
@@ -34,11 +44,11 @@
   =============================================== */
 
   .acc__bal-wrapper {
-    @apply text-center border-b-[.8px] border-neutral-200 py-6;
+    @apply text-center lg:text-left border-b-[.8px] border-neutral-200 py-6;
   }
 
   .acc__bal-amount {
-    @apply text-4xl font-semibold text-neutral-600;
+    @apply text-4xl font-semibold text-neutral-600 md:text-5xl my-1;
   }
 
   .acc__bal-subtext {
@@ -49,12 +59,16 @@
                   Welcome Content
   =============================================== */
 
+  .welcome__wrapper {
+    @apply flex flex-col items-center lg:items-start py-6;
+  }
+
   .welcome__text {
-    @apply text-center text-neutral-500 text-2xl font-semibold;
+    @apply text-center text-neutral-500 text-2xl font-semibold md:text-4xl;
   }
 
   .card__container {
-    @apply flex items-center justify-center gap-3 p-5 bg-shades-white rounded shadow-md mt-5;
+    @apply flex items-center justify-center gap-3 p-5 bg-shades-white rounded shadow-md mt-5 max-w-[324px];
   }
 
   .card__wrapper {
@@ -74,11 +88,11 @@
   =============================================== */
 
   .operation__wrapper {
-    @apply border-b-[.8px] border-neutral-200 py-3;
+    @apply border-b-[.8px] border-neutral-200 md:border-none py-3;
   }
 
   .operation__header-text {
-    @apply flex text-neutral-500 text-sm font-medium py-2;
+    @apply flex text-neutral-500 text-sm md:text-base font-medium py-2;
   }
 
   .operation__form-wrapper {
@@ -86,18 +100,38 @@
   }
 
   .operation__inputs-label {
-    @apply text-xs text-neutral-500 mb-1;
+    @apply text-xs md:text-sm text-neutral-500 mb-1;
   }
 
   .operation__inputs {
-    @apply rounded p-2.5 w-full text-xs text-neutral-400 bg-neutral-100;
+    @apply rounded p-2.5 w-full text-xs md:text-sm text-neutral-400 bg-neutral-100;
   }
 
   .operation__btn {
-    @apply rounded text-xs text-shades-white py-2.5 max-w-[9.25rem] w-full;
+    @apply rounded text-xs md:text-sm text-shades-white py-2.5 max-w-[9.25rem] w-full;
   }
 
-  .transfer__header {
+  .md__container {
+    @apply min-[600px]:max-w-[706px] w-full mx-auto;
+  }
+
+  .lg__pad {
+    @apply lg:pl-4;
+  }
+
+  /* ===============================================
+                    Operation Content
+  =============================================== */
+  .operation__container {
+    @apply min-[750px]:flex min-[750px]:flex-wrap min-[750px]:justify-between w-full lg:flex-col lg:flex-nowrap;
+  }
+
+  .transfer__wrapper {
+    @apply min-[750px]:basis-1/2 min-[750px]:max-w-[400px] lg:max-w-full;
+  }
+
+  .request__wrapper {
+    @apply min-[750px]:basis-1/2 min-[750px]:max-w-[307px] lg:max-w-full;
   }
 
   /* ===============================================
@@ -105,7 +139,7 @@
   =============================================== */
 
   .summary__wrapper {
-    @apply flex flex-wrap gap-3 py-3;
+    @apply flex flex-wrap justify-between gap-3 py-3 min-[600px]:max-w-[706px] mx-auto;
   }
 
   .summary__content {
@@ -118,5 +152,48 @@
 
   .summary__text-value {
     @apply text-lg font-medium;
+  }
+
+  /* ===============================================
+            Transaction History Content
+  =============================================== */
+
+  .transaction__container {
+    @apply my-9 lg:w-full;
+  }
+
+  .transaction__wrapper-header {
+    @apply flex justify-between items-center;
+  }
+
+  .transaction__sort-btn {
+    @apply text-sm text-neutral-500 flex items-center;
+  }
+
+  /* .movements {
+    @apply;
+  } */
+  .movements__row {
+    @apply flex justify-between items-center py-5 border-b-[1px] border-neutral-200;
+  }
+
+  .movements__type {
+    @apply hidden md:block;
+  }
+
+  .movements__wrapper {
+    @apply md:ml-20;
+  }
+
+  .movements__by {
+    @apply text-sm md:text-base text-neutral-600;
+  }
+
+  .movements__date {
+    @apply text-xs text-neutral-500;
+  }
+
+  .movements__value {
+    @apply text-lg md:text-xl font-medium text-tertiary-500;
   }
 }
