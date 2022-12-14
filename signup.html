@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./src/assets/icon.ico" />
-    <title>Login Page</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="./src/assets/build/loginTailwind.css" />
     <!-- Google Icons link -->
     <link
@@ -45,20 +45,34 @@
               class="flex flex-col gap-2 signup-form"
               form-attribute="signup"
             >
-              <input type="text" placeholder="Firstname" class="inputBox" />
-              <input type="text" placeholder="Lastname" class="inputBox" />
+              <input
+                type="text"
+                placeholder="Firstname"
+                class="inputBox"
+                id="firstname"
+              />
+              <input
+                type="text"
+                placeholder="Lastname"
+                class="inputBox"
+                id="lastname"
+              />
               <input
                 type="text"
                 placeholder="Username"
                 class="inputBox mt-2.5"
+                id="signupUsername"
               />
               <input type="password" placeholder="Password" class="inputBox" />
               <input
                 type="password"
                 placeholder="Confirm Password"
                 class="inputBox"
+                id="signupPassword"
               />
-              <button type="submit" class="btn btn-signup">Sign up</button>
+              <button type="submit" class="btn btn-signup" id="signupBtn">
+                Sign up
+              </button>
             </form>
 
             <p class="bot-text">Already have an account?</p>
@@ -67,7 +81,8 @@
         </div>
       </div>
     </main>
-    <script src="./src/assets/js/loginPage.js"></script>
+    <script type="module" src="./src/assets/js/signup.js"></script>
+    <script type="module" src="./src/assets/js/app.js"></script>
   </body>
 </html>
 

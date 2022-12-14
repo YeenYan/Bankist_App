@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./src/assets/icon.ico" />
-    <title>Login Page</title>
+    <title>Welcome Back</title>
     <link rel="stylesheet" href="./src/assets/build/loginTailwind.css" />
     <!-- Google Icons link -->
     <link
@@ -45,31 +45,22 @@
               class="flex flex-col gap-2 signin-form active"
               form-attribute="signin-active"
             >
-              <input type="text" placeholder="Username" class="inputBox" />
-              <input type="password" placeholder="Password" class="inputBox" />
-              <button type="submit" class="btn btn-signin">Sign in</button>
-            </form>
-
-            <!-- Sign Up -->
-            <!-- <form
-              class="flex flex-col gap-2 signup-form hidden"
-              form-attribute="signup"
-            >
-              <input type="text" placeholder="Firstname" class="inputBox" />
-              <input type="text" placeholder="Lastname" class="inputBox" />
               <input
                 type="text"
                 placeholder="Username"
-                class="inputBox mt-2.5"
+                class="inputBox"
+                id="loginUsername"
               />
-              <input type="password" placeholder="Password" class="inputBox" />
               <input
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Password"
                 class="inputBox"
+                id="loginPassword"
               />
-              <button type="submit" class="btn btn-signup">Sign up</button>
-            </form> -->
+              <button type="submit" class="btn btn-signin" id="signInBtn">
+                Sign in
+              </button>
+            </form>
 
             <p class="bot-text">Don't have an account?</p>
             <a href="signup.html" class="text-link md:text-base"
@@ -79,7 +70,8 @@
         </div>
       </div>
     </main>
-    <script src="./src/assets/js/loginPage.js"></script>
+    <script type="module" src="./src/assets/js/loginPage.js"></script>
+    <script type="module" src="./src/assets/js/app.js"></script>
   </body>
 </html>
 

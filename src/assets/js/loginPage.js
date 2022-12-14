@@ -1,59 +1,28 @@
 'use strict';
 
-const forms = document.querySelectorAll('form');
-const form = document.querySelector('form');
-const topText = document.querySelector('.top-text');
-const botText = document.querySelector('.bot-text');
-const textLink = document.querySelector('.text-link');
+import accounts from '../js/app.js'
 
-const signInTopMsg = `Enter username and password to sign in`;
-const signInBotMSg = `Don't have an account?`;
-const signInLinkText = `Create Account`;
-const signUpTopMsg = `Create your Bankist account`;
-const signUpBotMsg = `Already have an account?`;
-const signUpLinkText = `Sign In`;
+/* ==============================================================================
+                              DOM ELEMENTS
+============================================================================== */
+// LOGIN ELEMENTS
+const loginUsername = document.querySelector('#loginUsername');
+const loginPassword = document.querySelector('#loginPassword');
+const signInBtn = document.querySelector('#signInBtn');
 
-// textLink.addEventListener('click', changeForm);
+let currentAccount;
 
+signInBtn.addEventListener('click', (e) => {
+  e.preventDefault();
 
-// landingPageLoginBtn.addEventListener('click', changeForm);
-// landingPageCreateAccBtn.addEventListener('click', function () {
+  currentAccount = accounts.find((acc) => acc.username === loginUsername.value);
 
-//   // Change the form input fields
-//   form.classList.contains('active') ? form.classList.remove('active') : form.classList.add('active');
-//   form.classList.contains('hidden') ? form.classList.remove('hidden') : form.classList.add('hidden');
+  // this read like this => currentAccount && currentAccount.pin
+  // using optional chaining
 
-//   // Change the display text
-//   if (form.classList.contains('signin-form') && form.classList.contains('active')) {
-//     changeText(signInTopMsg, signInBotMSg, signInLinkText)
-//   } else if (form.classList.contains('signup-form') && form.classList.contains('active')) {
-//     changeText(signUpTopMsg, signUpBotMsg, signUpLinkText);
-//   }
-//   console.log('hello')
-// });
-
-
-// function changeForm() {
-//   forms.forEach((form) => {
-//     form.addEventListener('submit', function (e) {
-//       e.preventDefault();
-//     })
-
-//     // Change the form input fields
-//     form.classList.contains('hidden') ? form.classList.remove('hidden') : form.classList.add('hidden');
-//     form.classList.contains('active') ? form.classList.remove('active') : form.classList.add('active');
-
-//     // Change the display text
-//     if (form.classList.contains('signin-form') && form.classList.contains('active')) {
-//       changeText(signInTopMsg, signInBotMSg, signInLinkText)
-//     } else if (form.classList.contains('signup-form') && form.classList.contains('active')) {
-//       changeText(signUpTopMsg, signUpBotMsg, signUpLinkText);
-//     }
-//   });
-// }
-
-// function changeText(top, bot, link) {
-//   topText.textContent = top;
-//   botText.textContent = bot;
-//   textLink.text = link;
-// }
+  if (currentAccount?.password === Number(loginPassword.value)) {
+    console.log('correct');
+  } else {
+    console.log('invalid')
+  }
+});
