@@ -4,6 +4,10 @@ const heroImage = document.querySelector('.img');
 const mobileImage = './src/assets/mobileSizeimage.webp';
 const largeImage = './src/assets/device.webp';
 
+// Landing page DOM ELEMENT
+const landingPageLoginBtn = document.querySelector('#landingPageloginBtn');
+const landingPageCreateAccBtn = document.querySelector('#landingPageCreateAccBtn');
+
 const maxMobileScreenSize = 600;
 
 // dynamically changing image directory depending on screen size
@@ -24,3 +28,7 @@ const maxMobileScreenSize = 600;
 
 
 })();
+
+landingPageLoginBtn.addEventListener('click', function () {
+  console.log('hello');
+});

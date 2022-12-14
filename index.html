@@ -24,13 +24,19 @@
         class="nav__wrapper w-10/12 mx-auto flex items-center justify-between"
       >
         <div class="w-full">
-          <img
-            src="./src/assets/Logo.png"
-            alt="Bankist Logo"
-            class="bg-cover bg-center w-9/12 max-w-[11rem] min-w-[8.313rem]"
-          />
+          <a href="index.html"
+            ><img
+              src="./src/assets/Logo.png"
+              alt="Bankist Logo"
+              class="bg-cover bg-center w-9/12 max-w-[11rem] min-w-[8.313rem]"
+          /></a>
         </div>
-        <a href="#" class="btn-primary btn-primary-mdQueries">Login</a>
+        <a
+          id="landingPageloginBtn"
+          href="login.html"
+          class="btn-primary btn-primary-mdQueries"
+          >Login</a
+        >
       </nav>
     </header>
     <main class="">
@@ -49,8 +55,9 @@
               A ficticious and minimalistic online banking application.
             </p>
             <a
-              href="#"
+              href="signup.html"
               class="btn-create-account btn-primary btn-primary-mdQueries w-10/12 mt-[3.125rem] md:mt-[2rem]"
+              id="landingPageCreateAccBtn"
               >Create Account</a
             >
           </div>

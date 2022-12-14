@@ -13,28 +13,47 @@ const signUpTopMsg = `Create your Bankist account`;
 const signUpBotMsg = `Already have an account?`;
 const signUpLinkText = `Sign In`;
 
-forms.forEach((form) => {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-  })
+// textLink.addEventListener('click', changeForm);
 
-  textLink.addEventListener('click', function () {
 
-    // Change the form input fields
-    form.classList.contains('hidden') ? form.classList.remove('hidden') : form.classList.add('hidden');
-    form.classList.contains('active') ? form.classList.remove('active') : form.classList.add('active');
+// landingPageLoginBtn.addEventListener('click', changeForm);
+// landingPageCreateAccBtn.addEventListener('click', function () {
 
-    // Change the display text
-    if (form.classList.contains('signin-form') && form.classList.contains('active')) {
-      changeText(signInTopMsg, signInBotMSg, signInLinkText)
-    } else if (form.classList.contains('signup-form') && form.classList.contains('active')) {
-      changeText(signUpTopMsg, signUpBotMsg, signUpLinkText);
-    }
-  });
-});
+//   // Change the form input fields
+//   form.classList.contains('active') ? form.classList.remove('active') : form.classList.add('active');
+//   form.classList.contains('hidden') ? form.classList.remove('hidden') : form.classList.add('hidden');
 
-function changeText(top, bot, link) {
-  topText.textContent = top;
-  botText.textContent = bot;
-  textLink.text = link;
-}
+//   // Change the display text
+//   if (form.classList.contains('signin-form') && form.classList.contains('active')) {
+//     changeText(signInTopMsg, signInBotMSg, signInLinkText)
+//   } else if (form.classList.contains('signup-form') && form.classList.contains('active')) {
+//     changeText(signUpTopMsg, signUpBotMsg, signUpLinkText);
+//   }
+//   console.log('hello')
+// });
+
+
+// function changeForm() {
+//   forms.forEach((form) => {
+//     form.addEventListener('submit', function (e) {
+//       e.preventDefault();
+//     })
+
+//     // Change the form input fields
+//     form.classList.contains('hidden') ? form.classList.remove('hidden') : form.classList.add('hidden');
+//     form.classList.contains('active') ? form.classList.remove('active') : form.classList.add('active');
+
+//     // Change the display text
+//     if (form.classList.contains('signin-form') && form.classList.contains('active')) {
+//       changeText(signInTopMsg, signInBotMSg, signInLinkText)
+//     } else if (form.classList.contains('signup-form') && form.classList.contains('active')) {
+//       changeText(signUpTopMsg, signUpBotMsg, signUpLinkText);
+//     }
+//   });
+// }
+
+// function changeText(top, bot, link) {
+//   topText.textContent = top;
+//   botText.textContent = bot;
+//   textLink.text = link;
+// }
