@@ -57,18 +57,36 @@
                 class="inputBox"
                 id="lastname"
               />
+              <select class="dropdown">
+                <!-- <option
+                  class="inputBoxOption"
+                  value=""
+                  disabled
+                  selected
+                  hidden
+                >
+                  Choose Country
+                </option> -->
+                <!-- <option value="option1">USA</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option> -->
+              </select>
               <input
                 type="text"
                 placeholder="Username"
                 class="inputBox mt-2.5"
                 id="signupUsername"
               />
-              <input type="password" placeholder="Password" class="inputBox" />
+              <input
+                type="password"
+                placeholder="Password"
+                class="inputBox"
+                id="signupPassword"
+              />
               <input
                 type="password"
                 placeholder="Confirm Password"
                 class="inputBox"
-                id="signupPassword"
               />
               <button type="submit" class="btn btn-signup" id="signupBtn">
                 Sign up
@@ -77,13 +95,15 @@
 
             <p class="bot-text">Already have an account?</p>
             <a href="login.html" class="text-link md:text-base">Sign In</a>
+            <a href="app.html" class="text-link md:text-base">Main app</a>
           </div>
         </div>
       </div>
     </main>
     <script type="module" src="./src/assets/js/signup.js"></script>
     <script type="module" src="./src/assets/js/app.js"></script>
+    <script type="module" src="./src/assets/js/countriesData.js"></script>
   </body>
 </html>
 
-<!-- npx tailwindcss -i ./src/assets/css/signupTailwind.css -o ./src/assets/build/tailwind.css --watch -->
+<!-- npx tailwindcss -i ./src/assets/css/signupTailwind.css -o ./src/assets/build/signupTailwind.css --watch -->

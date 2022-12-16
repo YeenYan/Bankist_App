@@ -21,7 +21,11 @@
   =============================================== */
 
   .inputBox {
-    @apply text-xs md:text-sm bg-neutral-100 p-2.5 rounded focus:outline-0 outline-neutral-200;
+    @apply text-xs md:text-sm text-neutral-400 bg-neutral-100 p-2.5 rounded focus:outline-0 outline-neutral-200;
+  }
+
+  .dropdown {
+    @apply text-xs md:text-sm text-neutral-400 bg-neutral-100 py-2.5 px-1.5 rounded focus:outline-0 outline-neutral-200;
   }
 
   .btn {

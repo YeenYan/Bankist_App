@@ -12,17 +12,19 @@ const signInBtn = document.querySelector('#signInBtn');
 
 let currentAccount;
 
-signInBtn.addEventListener('click', (e) => {
-  e.preventDefault();
+if (signInBtn) {
+  signInBtn.addEventListener('click', (e) => {
+    e.preventDefault();
 
-  currentAccount = accounts.find((acc) => acc.username === loginUsername.value);
+    currentAccount = accounts.find((acc) => acc.username === loginUsername.value);
 
-  // this read like this => currentAccount && currentAccount.pin
-  // using optional chaining
+    // this read like this => currentAccount && currentAccount.pin
+    // using optional chaining
 
-  if (currentAccount?.password === Number(loginPassword.value)) {
-    console.log('correct');
-  } else {
-    console.log('invalid')
-  }
-});
+    if (currentAccount?.password === Number(loginPassword.value)) {
+      console.log(currentAccount);
+    } else {
+      console.log('invalid')
+    }
+  });
+}

@@ -3,6 +3,7 @@
 /* ==============================================================================
                               DOM ELEMENTS
 ============================================================================== */
+const transferBtn = document.querySelector('#transferBtn');
 
 
 // DIFFERENT DATA! Contains movement dates, currency and locale
@@ -79,6 +80,3 @@ export default accounts;
 /* ==============================================================================
                               LOCAL STORAGE DATA
 ============================================================================== */
-function updateLS() {
-
-}
