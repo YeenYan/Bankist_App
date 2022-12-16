@@ -57,17 +57,16 @@ function updateLS() {
   const locale = 'locale';
   const currency = 'currency';
 
+  const getCurrency = countries.find(obj => obj.countryName === dropdownContainer.value);
+
   userAccount[owner] = `${firstname.value} ${lastname.value}`;
   userAccount[username] = signupUsername.value;
   userAccount[password] = signupPassword.value;
-  userAccount[locale] = navigator.language;
+  userAccount[currency] = getCurrency.countryCurrency;
+  userAccount[locale] = getCurrency.countryLocale;
 
   const now = new Date();
   userAccount.movemenstDates.push(now.toISOString());
-
-  const currencyCode = new Intl.NumberFormat('en-US', { style: 'currency' })
-  userAccount[currency] = currencyCode.format(100);
-
 
   console.log(userAccount);
 }
