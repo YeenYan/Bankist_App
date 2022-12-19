@@ -24,7 +24,7 @@
       background-image: url('./src/assets/background/backgroundPattern.svg');
     "
   >
-    <main class="flex h-screen items-center justify-center">
+    <main class="forModal flex h-screen items-center justify-center">
       <div
         class="bg-shades-white w-screen h-screen md:max-w-[27.5rem] md:h-auto md:py-14 md:px-9 md:rounded md:drop-shadow-lg"
       >
@@ -58,18 +58,7 @@
                 id="lastname"
               />
               <select class="dropdown">
-                <!-- <option
-                  class="inputBoxOption"
-                  value=""
-                  disabled
-                  selected
-                  hidden
-                >
-                  Choose Country
-                </option> -->
-                <!-- <option value="option1">USA</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option> -->
+                <!-- elements created in signup.js file -->
               </select>
               <input
                 type="text"
@@ -87,6 +76,7 @@
                 type="password"
                 placeholder="Confirm Password"
                 class="inputBox"
+                id="signupConfirmPassword"
               />
               <button type="submit" class="btn btn-signup" id="signupBtn">
                 Sign up
@@ -103,6 +93,7 @@
     <script type="module" src="./src/assets/js/signup.js"></script>
     <script type="module" src="./src/assets/js/app.js"></script>
     <script type="module" src="./src/assets/js/countriesData.js"></script>
+    <script type="module" src="./src/assets/js/dialogBox.js"></script>
   </body>
 </html>
 

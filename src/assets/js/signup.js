@@ -1,6 +1,7 @@
 'use strict';
 
 import countries from '../js/countriesData.js';
+import baseDialog from './dialogBox.js';
 
 /* ==============================================================================
                               DOM ELEMENTS
@@ -9,6 +10,7 @@ const firstname = document.querySelector('#firstname');
 const lastname = document.querySelector('#lastname');
 const signupUsername = document.querySelector('#signupUsername');
 const signupPassword = document.querySelector('#signupPassword');
+const signupConfirmPassword = document.querySelector('#signupConfirmPassword');
 const signUpBtn = document.querySelector('#signupBtn');
 const dropdownContainer = document.querySelector('.dropdown');
 
@@ -56,26 +58,41 @@ function updateLS() {
   const password = 'password';
   const locale = 'locale';
   const currency = 'currency';
-
-  const getCurrency = countries.find(obj => obj.countryName === dropdownContainer.value);
-
-  userAccount[owner] = `${firstname.value} ${lastname.value}`;
-  userAccount[username] = signupUsername.value;
-  userAccount[password] = signupPassword.value;
-  userAccount[currency] = getCurrency.countryCurrency;
-  userAccount[locale] = getCurrency.countryLocale;
-
   const now = new Date();
-  userAccount.movemenstDates.push(now.toISOString());
+  const getCurrencyLocale = countries.find(obj => obj.countryName === dropdownContainer.value);
 
-  console.log(userAccount);
-}
+  firstname.value ? firstname.classList.remove('inputError') : firstname.classList.add('inputError');
+  lastname.value ? lastname.classList.remove('inputError') : lastname.classList.add('inputError');
+  signupUsername.value ? signupUsername.classList.remove('inputError') : signupUsername.classList.add('inputError');
+  dropdownContainer.value ? dropdownContainer.classList.remove('inputError') : dropdownContainer.classList.add('inputError');
+  signupPassword.value ? signupPassword.classList.remove('inputError') : signupPassword.classList.add('inputError');
+
+
+  if (signupPassword.value && signupConfirmPassword.value && signupPassword.value === signupConfirmPassword.value) {
+    if (firstname.value && lastname.value && signupUsername.value && dropdownContainer.value) {
+      userAccount[owner] = `${firstname.value.trim()} ${lastname.value.trim()}`;
+      userAccount[username] = signupUsername.value.trim();
+      userAccount[password] = signupPassword.value.trim();
+      userAccount[currency] = getCurrencyLocale.countryCurrency;
+      userAccount[locale] = getCurrencyLocale.countryLocale;
+      userAccount.movemenstDates.push(now.toISOString());
+
+      console.log(userAccount);
+      baseDialog('Success', 'Added Successfully', 'Okay');
+    }
+    signupConfirmPassword.classList.remove('inputError');
+  } else {
+    signupConfirmPassword.classList.add('inputError');
+  }
+};
 
 
 if (signUpBtn) {
   signUpBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    updateLS()
+    updateLS();
   });
-}
+};
+
+//     baseDialog('Success', 'Added Successfully', 'Okay');

@@ -43,4 +43,8 @@
   .text-link {
     @apply text-sm text-tertiary-500;
   }
+
+  .inputError {
+    @apply outline outline-1 outline-error-500 focus:outline focus:outline-error-500 focus:outline-1;
+  }
 }
